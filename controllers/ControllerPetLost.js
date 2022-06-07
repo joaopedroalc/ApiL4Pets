@@ -6,6 +6,7 @@ module.exports = {
       "Id_User_Ref": req.body.Id_User_Ref,
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
+      "Reword_PetLost": req.body.Reword_PetLost,
       "IdentificationImage_PetLost": req.body.IdentificationImage_PetLost,
     }
 
@@ -23,6 +24,7 @@ module.exports = {
       "Id_User_Ref": req.body.Id_User_Ref,
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
+      "Reword_PetLost": req.body.Reword_PetLost,
       "IdentificationImage_PetLost": req.body.IdentificationImage_PetLost,
     }
 

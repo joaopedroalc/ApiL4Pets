@@ -7,6 +7,7 @@ module.exports = {
             "Email": req.body.Email,
             "Password_User": req.body.Password_User,
             "Phonenumber": req.body.Phonenumber,
+            "Age": req.body.Age
         }
 
         try {
@@ -44,6 +45,7 @@ module.exports = {
             "Email": req.body.Email,
             "Password_User": req.body.Password_User,
             "Phonenumber": req.body.Phonenumber,
+            "Age": req.body.Age
         }
 
         try {
