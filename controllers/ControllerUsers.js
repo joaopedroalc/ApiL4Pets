@@ -11,24 +11,25 @@ module.exports = {
 
         try {
             let response;
-            await db.query("SELECT * FROM Users WHERE Email = ?", [datas["Email"]], (err, res) => {
-                if (err) {
-                    res.send(err);
-                }
-                if (res.length == 0) {
-                    response = db.query('INSERT INTO Users SET ?', [datas], (err, res) => {
-                        if (err) {
-                            res.send(err);
-                        }
-                        console.log("entrei")
-                        res.send({ msg: "Cadastro feito com sucesso!" });
-                    })
-                } else {
-                    res.send({ msg: "Usuário ja cadastrado" });
-                }
-            })
+            //TESTE ABAIXO DE VERIFICAÇÃO DE EMAIL
+            // await db.query("SELECT * FROM Users WHERE Email = ?", [datas["Email"]], (err, res) => {
+            //     if (err) {
+            //         res.send(err);
+            //     }
+            //     if (res.length == 0) {
+            //         response = db.query('INSERT INTO Users SET ?', [datas], (err, res) => {
+            //             if (err) {
+            //                 res.send(err);
+            //             }
+            //             console.log("entrei")
+            //             res.send({ msg: "Cadastro feito com sucesso!" });
+            //         })
+            //     } else {
+            //         res.send({ msg: "Usuário ja cadastrado" });
+            //     }
+            // })
 
-            // response = await db.query('INSERT INTO Users SET ?', [datas]);
+            response = await db.query('INSERT INTO Users SET ?', [datas]);
             res.json(response);
             console.log(response);
         } catch (error) {
