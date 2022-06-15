@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { request } = require('express');
 
 app.use(express.json());
 
@@ -27,6 +28,10 @@ app.put('/PetLost/update/:Id_PetLost', ControllerPetLost.update); //ok
 app.get('/PetLost', ControllerPetLost.findAll); //ok
 app.get('/PetLost/:Id_PetLost', ControllerPetLost.findById); //ok
 app.delete('/PetLost/:Id_PetLost', ControllerPetLost.delete);//ok
+
+app.get('/', (req, res) => {
+    res.send('API L4PETS')
+})
 
 
 const PORT = process.env.PORT || 8089;
