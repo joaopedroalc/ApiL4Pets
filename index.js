@@ -1,8 +1,21 @@
 const express = require('express');
 const app = express();
 const { request } = require('express');
+const cors = require("cors");
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.use(express.json());
+
+const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions)) // Use this after the va
 
 const ControllerUsers = require('./controllers/ControllerUsers');
 const ControllerPetFound = require('./controllers/ControllerPetFound');
