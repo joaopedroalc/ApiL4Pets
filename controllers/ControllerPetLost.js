@@ -3,6 +3,7 @@ const db = require('../config/db');
 module.exports = {
   async insert(req, res) {
     let datas = {
+      "email": req.body.email,
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
       "Reword_PetLost": req.body.Reword_PetLost,
@@ -20,6 +21,7 @@ module.exports = {
     let Id_PetLost = req.params.Id_PetLost;
 
     let datas = {
+      "email": req.body.email,
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
       "Reword_PetLost": req.body.Reword_PetLost,

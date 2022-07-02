@@ -3,17 +3,15 @@ const db = require('../config/db');
 module.exports = {
     async insert(req, res) {
         let datas = {
-            "Name_User": req.body.Name_User,
-            "Email": req.body.Email,
-            "Password_User": req.body.Password_User,
-            "Phonenumber": req.body.Phonenumber,
-            "Age": req.body.Age
+            "email": req.body.email,
+            "full_name": req.body.full_name,
+            "last_login": req.body.last_login
         }
 
         try {
             let response;
             //TESTE ABAIXO DE VERIFICAÇÃO DE EMAIL
-            // await db.query("SELECT * FROM Users WHERE Email = ?", [datas["Email"]], (err, res) => {
+            // await db.query("SELECT * FROM Users WHERE full_name = ?", [datas["full_name"]], (err, res) => {
             //     if (err) {
             //         res.send(err);
             //     }
@@ -41,11 +39,9 @@ module.exports = {
         let Id_User = req.params.Id_User;
 
         let datas = {
-            "Name_User": req.body.Name_User,
-            "Email": req.body.Email,
-            "Password_User": req.body.Password_User,
-            "Phonenumber": req.body.Phonenumber,
-            "Age": req.body.Age
+            "email": req.body.email,
+            "full_name": req.body.full_name,
+            "last_login": req.body.last_login
         }
 
         try {
