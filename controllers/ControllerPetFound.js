@@ -37,16 +37,15 @@ module.exports = {
   },
   async findAll(req, res) {
     try {
-      let response = await db.query('SELECT * FROM PetFound');
+      let response = await db.query('SELECT * FROM PetFound ORDER BY Id_PetFound DESC LIMIT 7');
       res.json(response[0]);
     } catch (error) {
       console.log(error);
     }
   },
   async findById(req, res) {
-    let Id_PetFound = req.params.Id_PetFound;
     try {
-      let response = await db.query(`SELECT * FROM PetFound WHERE Id_PetFound = ${Id_PetFound}`);
+      let response = await db.query('SELECT * FROM PetFound ORDER BY Id_PetFound DESC');
       res.json(response[0]);
     } catch (error) {
       console.log(error);

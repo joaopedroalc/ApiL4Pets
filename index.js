@@ -32,14 +32,14 @@ app.delete('/Users/:Id_User', ControllerUsers.delete);//ok
 app.post('/PetFound/insert', ControllerPetFound.insert); //ok
 app.put('/PetFound/update/:Id_PetFound', ControllerPetFound.update); //ok
 app.get('/PetFound', ControllerPetFound.findAll); //ok
-app.get('/PetFound/:Id_PetFound', ControllerPetFound.findById); //ok
+app.get('/PetFound/Pets', ControllerPetFound.findById); //ok
 app.delete('/PetFound/:Id_PetFound', ControllerPetFound.delete);//ok
 
 //PetLost
 app.post('/PetLost/insert', ControllerPetLost.insert); //ok
 app.put('/PetLost/update/:Id_PetLost', ControllerPetLost.update); //ok
 app.get('/PetLost', ControllerPetLost.findAll); //ok
-app.get('/PetLost/:Id_PetLost', ControllerPetLost.findById); //ok
+app.get('/PetLost/Pets', ControllerPetLost.findById); //ok
 app.delete('/PetLost/:Id_PetLost', ControllerPetLost.delete);//ok
 
 app.get('/', (req, res) => {
