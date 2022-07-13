@@ -6,6 +6,7 @@ module.exports = {
       "email": req.body.email,
       "DescriptionPet_PetFound": req.body.DescriptionPet_PetFound,
       "Location_PetFound": req.body.Location_PetFound,
+      "Phone_PetFound": req.body.Phone_PetFound,
       "IdentificationImage_PetFound": req.body.IdentificationImage_PetFound,
     }
 
@@ -23,6 +24,7 @@ module.exports = {
       "email": req.body.email,
       "DescriptionPet_PetFound": req.body.DescriptionPet_PetFound,
       "Location_PetFound": req.body.Location_PetFound,
+      "Phone_PetFound": req.body.Phone_PetFound,
       "IdentificationImage_PetFound": req.body.IdentificationImage_PetFound,
     }
 

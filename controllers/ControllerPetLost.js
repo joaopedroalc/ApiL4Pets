@@ -7,6 +7,7 @@ module.exports = {
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
       "Reword_PetLost": req.body.Reword_PetLost,
+      "Phone_PetLost": req.body.Phone_PetLost,
       "IdentificationImage_PetLost": req.body.IdentificationImage_PetLost,
     }
 
@@ -25,6 +26,7 @@ module.exports = {
       "DescriptionPet_PetLost": req.body.DescriptionPet_PetLost,
       "Location_PetLost": req.body.Location_PetLost,
       "Reword_PetLost": req.body.Reword_PetLost,
+      "Phone_PetLost": req.body.Phone_PetLost,
       "IdentificationImage_PetLost": req.body.IdentificationImage_PetLost,
     }
 
